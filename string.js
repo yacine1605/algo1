@@ -1,45 +1,28 @@
-str = "";
-let x;
-let len = 0;
-do {
-  x = prompt("give char");
-  if (x.length == 1) {
-    str += x;
-  }
-} while (x != "." || x.length != 1);
+let set1 = [15, 1, 9],
+  set2 = [9, 3, 6];
+const obj = {};
 
-console.log(str);
-console.log("Length of str= ", str.length);
-
-/*The number of char*/
-for (let i = 0; i < str.length; i++) {
-  if (str[i] != " " && str[i] != ".") {
-    len += 1;
+for (let i = 0; i < set1.length; i++) {
+  obj[set1[i]] = 1;
+}
+for (let i = 0; i < set2.length; i++) {
+  if (obj[set2[i]] !== undefined) {
+    obj[set2[i]] += 1;
+  } else {
+    obj[set2[i]] = 1;
   }
 }
-console.log("NB_Char= ", len);
-
-/*The number of world*/
-len = 0;
-for (let i = 0; i < str.length; i++) {
-  if (str[i] == " " || str[i] == ".") {
-    len += 1;
+const keys = Object.keys(obj); /*Permet de sauvegarder les keys de l'objet */
+console.log(keys);
+let sum_commun = 0,
+  sum_diff = 0;
+for (let i = 0; i < keys.length; i++) {
+  if (obj[keys[i]] == 2) {
+    sum_commun += parseFloat(keys[i]);
+  } else {
+    sum_diff += parseFloat(keys[i]);
   }
 }
-console.log("Nb_Words= ", len);
-
-/*The number of vowels*/
-len = 0;
-for (let i = 0; i < str.length; i++) {
-  if (
-    str[i] == "a" ||
-    str[i] == "e" ||
-    str[i] == "o" ||
-    str[i] == "i" ||
-    str[i] == "u"
-  ) {
-    len += 1;
-  }
-}
-
-console.log("NB_vowels= ", len);
+console.log(obj);
+console.log(sum_diff);
+console.log(sum_commun)
