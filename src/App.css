@@ -1,0 +1,86 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.container {
+	height: 30vh;
+	/*background-color: aqua;*/
+}
+
+.header {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+h2 {
+	display: flex;
+	justify-content: center;
+}
+.theme {
+	display: flex;
+	justify-content: flex-end;
+}
+form {
+	padding: 5%;
+	display: flex;
+	justify-content: center;
+	margin-left: 30rem;
+	margin-right: 30rem;
+}
+
+.input > input {
+	background-color: navy;
+	color: #ffffff;
+	height: 3rem;
+	width: 16rem;
+}
+
+.black {
+	height: 100vh;
+	background-color: black;
+	background-image: url('./bg-desktop-dark.jpg');
+	background-repeat: no-repeat;
+}
+.white {
+	height: 100vh;
+	background-color: white;
+	background-image: url('./bg-desktop-light.jpg');
+	background-repeat: no-repeat;
+}
+.text {
+	position: fixed 50px 30px;
+}
+
+.white .item {
+	color: white;
+	display: flex;
+	padding-left: 10%;
+	padding-bottom: 5%;
+	padding-top: 5%;
+	height: 10%;
+	border: 1 solid white;
+	background-color: rgb(189, 189, 218);
+}
+.black .item {
+	color: white;
+	display: flex;
+	padding-left: 10%;
+	padding-bottom: 5%;
+	padding-top: 5%;
+	height: 10%;
+	border: 1 solid white;
+	background-color: rgb(4, 4, 51);
+}
+
+.list {
+	margin-left: 40%;
+	margin-right: 40%;
+}
+
+/*
+.
+.btn {I
+	width: 10%;
+}
+*/
